@@ -32,7 +32,7 @@ def main():
             if event.type == pygame.QUIT:
                 running = False
         
-		#Update player situation
+
         updatable.update(dt)
 
         for asteroid in asteroids:
@@ -50,11 +50,11 @@ def main():
         
         screen.fill((0, 0, 0))
         
-		#Draw the sprites in drawable
+
         for sprite in drawable:
             sprite.draw(screen)
         
-        # Update the display
+        
         pygame.display.flip()
         
 

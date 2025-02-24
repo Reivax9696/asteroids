@@ -1,9 +1,9 @@
 import pygame
 
-# Base class for game objects
+
 class CircleShape(pygame.sprite.Sprite):
     def __init__(self, x, y, radius):
-        # we will be using this later
+
         if hasattr(self, "containers"):
             super().__init__(self.containers)
         else:
@@ -14,11 +14,9 @@ class CircleShape(pygame.sprite.Sprite):
         self.radius = radius
 
     def draw(self, screen):
-        # sub-classes must override
          pygame.draw.circle(screen, (255, 255, 255), (int(self.position.x), int(self.position.y)), self.radius)
 
     def update(self, dt):
-        # sub-classes must override
         pass
 
     def collision(self, other):
